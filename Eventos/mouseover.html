@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover</title>
+</head>
+<body>
+    <h1 id="h1">Tabela de Nomes</h1>
+    <table>
+        <thead>
+            <tr class="tr">Nome</tr>
+            <tr class="tr">Sobre Nome</tr>
+        </thead>
+        <tbody>
+            <th class="th">Mendes</th>
+            <th class="th">Manuel</th>
+        </tbody>
+    </table>
+
+    <script>
+        let th = document.getElementsByClassName('th');
+        let tr = document.getElementsByClassName('tr');
+        let h1 = document.getElementById('h1');
+
+        h1.addEventListener('mouseover',function(){
+            console.log("Passou");
+        });
+
+        for(var i = 0; i < tr.length; i++){
+            tr[i].addEventListener('mouseover',function(){
+                this.ClassList.console.log("Passou");
+            })
+        }
+
+    </script>
+</body>
+</html>
